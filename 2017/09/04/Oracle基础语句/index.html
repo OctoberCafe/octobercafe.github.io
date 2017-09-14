@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="创建数据库1.新建数据库可以通过安装的软件，来新建数据库实例- 这个无疑是最为简单的一种方式
+2.可以通过SQL语句来进行数据库的创建
+例如，创建一个名叫名为“MYNEWDB”的数据库
+
+1. 指定数据库的名称和实体名称应该都是&amp;apos;MYNEWDB&amp;apos;
+DB_NAME=MYNEWDB
+">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="OctoberCafe">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Oracle基础语句"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="OctoberCafe&#39;s Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Oracle基础语句 - OctoberCafe&#39;s Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+	
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Oracle基础语句</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2017-09-04
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/数据库/">#数据库</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/数据库/">数据库</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><h3 id="1-新建数据库可以通过安装的软件，来新建数据库实例"><a href="#1-新建数据库可以通过安装的软件，来新建数据库实例" class="headerlink" title="1.新建数据库可以通过安装的软件，来新建数据库实例"></a>1.新建数据库可以通过安装的软件，来新建数据库实例</h3><pre><code>- 这个无疑是最为简单的一种方式
+</code></pre><h3 id="2-可以通过SQL语句来进行数据库的创建"><a href="#2-可以通过SQL语句来进行数据库的创建" class="headerlink" title="2.可以通过SQL语句来进行数据库的创建"></a>2.可以通过SQL语句来进行数据库的创建</h3><ul>
+<li>例如，创建一个名叫名为“MYNEWDB”的数据库</li>
+</ul>
+<h4 id="1-指定数据库的名称和实体名称"><a href="#1-指定数据库的名称和实体名称" class="headerlink" title="1. 指定数据库的名称和实体名称"></a>1. 指定数据库的名称和实体名称</h4><pre><code>应该都是&apos;MYNEWDB&apos;
+DB_NAME=MYNEWDB
+SID=MYNEWDB
+</code></pre><h4 id="2-确定数据库管理员的认证方式"><a href="#2-确定数据库管理员的认证方式" class="headerlink" title="2. 确定数据库管理员的认证方式"></a>2. 确定数据库管理员的认证方式</h4><pre><code>可以选择系统认证和口令认证，口令认证即是我们常用的口令登录数据库的方式。
+</code></pre><h4 id="3-创建初始化参数文件"><a href="#3-创建初始化参数文件" class="headerlink" title="3. 创建初始化参数文件"></a>3. 创建初始化参数文件</h4><pre><code>Oracle提供的初始化参数文件位于
+    $ORACLE_HOME\admin\sample\pfile目录中的initsmpl.ora
+创建参数文件名为：initMYNEWDB.ora,存放在
+    D:\oracle\ora92\database\initMYNEWDB.ora
+这里我是将Oracle数据装在了D盘。
+*主要内容修改：*
+- 共享服务器设置
+    dispatchers=&quot;(PROTOCOL=TCP)(SERVICE=MYNEWDBXDB)
+- 数据库实例名设置
+    instance=MYNEWDB
+- 安全与审计设置
+    remote_login_passwordfile=EXCLUSIVE
+- 排序区大小设置
+    pga_aggregate_target=25165824
+    sort_area_size=524288
+- 全局数据库名设置
+    db_domain=&quot;&quot;
+    db_name=MYNEWDB
+- 控制文件设置
+    control_files=(&quot;D:\oracle\oradata\MYNEWDB\CONTROL01.CTL&quot;,  
+    &quot;D:\oracle\oradata\MYNEWDB\CONTROL02.CTL&quot;,  
+    &quot;D:\oracle\oradata\MYNEWDB\CONTROL03.CTL&quot;)
+   - SGA区设置
+    java_pool_size =33554432  
+    large_pool_size=8388608  
+    shared_pool_size=50331648
+- 游标与库缓存设置
+    open_cursors=300
+- 回退段和撤销表空间设置
+    undo_management=AUTO  
+    undo_retention=10800  
+    undo_tablespace=UNDOTBS
+- 诊断与跟踪信息设置
+    background_dump_dest=D:\oracle\admin\MYNEWDB\bdump  
+    core_dump_dest=D:\oracle\admin\MYNEWDB\cdump  
+    timed_statistics=TRUE 
+    user_dump_dest=D:\oracle\admin\MYNEWDB\udump
+- 用户进程设置
+    process = 150
+- 缓冲区与数据库大小设置
+    db_block_size=8192  
+    db_cache_size=25165824  
+    db_file_multiblock_read_count=16
+</code></pre><h4 id="4-在cmd控制台中"><a href="#4-在cmd控制台中" class="headerlink" title="4. 在cmd控制台中"></a>4. 在cmd控制台中</h4><pre><code>1.     将环境变量ORACLE_SID设置为“MYNEWDB”
+    C:\SET ORACLE_SID=MYNEWDB
+
+2. 利用ORADIM命令创建MYNEWDB数据库
+    C:\ORADMIN -NEW -SID MYNEWDB -INTPWD MYNEWDB -STARTMODE MANUAL -PFILE 
+    D:\oracle\ora92\database
+ORADMIN是Oracle提供的一个对实例进行管理的工具，
+可以创建、修改、删除、启动和关闭一个实例，
+执行C:\ORADMIN HELP命令可以查看该命令的使用情况
+</code></pre><h4 id="5-在SQLPlus中或者cmd控制台中"><a href="#5-在SQLPlus中或者cmd控制台中" class="headerlink" title="5. 在SQLPlus中或者cmd控制台中"></a>5. 在SQLPlus中或者cmd控制台中</h4><pre><code>C:\sqlplus /nolog -- 在SQLPlus中不用这句  
+SQL&gt;connect sys/mynewdb as sysdba;  
+SQL&gt;startup nomount;
+</code></pre><h4 id="6-使用create-database-语句创建数据库"><a href="#6-使用create-database-语句创建数据库" class="headerlink" title="6. 使用create database 语句创建数据库"></a>6. 使用create database 语句创建数据库</h4><pre><code>    SQL&gt;CREATE DATABASE MYNEWDB  
+    MAXINSTANCES 1  
+    MAXLOGHISTORY 1  
+    MAXLOGFILES 5  
+    MAXLOGMEMBERS 5  
+    MAXDATAFILES 100  
+    DATAFILE &apos;D:\oracle\oradata\mynewdb\system.dbf&apos; size 50M  --设置数据库大小
+    --指定表空间大小
+    UNDO TABLESPACE undotbs DATAFILE &apos;D:\oracle\oradata\mynewdb\undotbs.dbf&apos; size 50M   
+    AUTOEXTEND ON NEXT 5120K MAXSIZE UNLIMITED  --指定扩展容量大小
+    DEFAULT TEMPORARY TABLESPACE tempts  --指定默认表空间
+    CHARACTER SET US7ASCII  --指定字符集
+    NATIONAL CHARACTER SET AL16UTF16  
+    LOGFILE GROUP 1 (&apos;D:\oracle\oradata\mynewdb\redo01.log&apos;) size 100M,  
+         GROUP 2 (&apos;D:\oracle\oradata\mynewdb\redo02.log&apos;) size 100M,  
+         GROUP 3 (&apos;D:\oracle\oradata\mynewdb\redo03.log&apos;) size 100M;
+在执行create database 语句的同时，
+自动执行$ORACLE_HOME\rdbms\admin\sql.bsq脚本，
+创建SYSTEM表空间和SYSTEM回退段、
+建立SYS和SYSTEM账号、建立数据字典基础表、
+建立数据字典索引、创建预定义角色等。    
+</code></pre><h4 id="7-用create-database语句创建的数据库中只有SYSTEM、UNDOTBS和TEMPTBS三个表空间，还需要创建其他一些额外的表空间"><a href="#7-用create-database语句创建的数据库中只有SYSTEM、UNDOTBS和TEMPTBS三个表空间，还需要创建其他一些额外的表空间" class="headerlink" title="7. 用create database语句创建的数据库中只有SYSTEM、UNDOTBS和TEMPTBS三个表空间，还需要创建其他一些额外的表空间"></a>7. 用create database语句创建的数据库中只有SYSTEM、UNDOTBS和TEMPTBS三个表空间，还需要创建其他一些额外的表空间</h4><pre><code>SQL&gt;create tablespace users  
+datafile &apos;d:\oracle\oradata\mynewdb\users01.dbf&apos; size 100M 
+reuse autoextend on next 1280K maxsize unlitited  extend management local;          
+SQL&gt;create tablespace index 
+datafile &apos;d:\oracle\oradata\mynewdb\index01.dbf&apos; size 100M  
+reuse autoextend on next 1280K maxsize unlimited  extend management local;
+</code></pre><h4 id="8-运行脚本创建数据字典视图"><a href="#8-运行脚本创建数据字典视图" class="headerlink" title="8. 运行脚本创建数据字典视图"></a>8. 运行脚本创建数据字典视图</h4><pre><code>执行两个脚本语句：用于创建数据字典视图，包括V$动态性能视图和它们的同义词，
+同时授予PUBLIC角色对这些同义词的访问权限
+</code></pre><h3 id="创建用户以及给予权限"><a href="#创建用户以及给予权限" class="headerlink" title="创建用户以及给予权限"></a>创建用户以及给予权限</h3><h4 id="创建名为test的用户"><a href="#创建名为test的用户" class="headerlink" title="创建名为test的用户"></a>创建名为test的用户</h4><ul>
+<li>登录system用户<pre><code>conn system/password
+</code></pre>  password 即是之前创建数据库设置的口令<br>  <img src="http://ovr3wvmyf.bkt.clouddn.com/17-9-4/12405526.jpg" alt="连接到system"></li>
+<li><p>创建用户</p>
+<p>  SQL语句模板是 username是要创建的用户的名称，password是对应的口令</p>
+<pre><code>create user username identified by password
+</code></pre><p>  我们设定用户名是test口令也是test</p>
+<pre><code>create user test identified by test
+</code></pre><p>  <img src="http://ovr3wvmyf.bkt.clouddn.com/17-9-4/77732524.jpg" alt="创建用户"></p>
+</li>
+<li><p>给予权限</p>
+<p>  用户创建后没有连接到数据库、创建表、视图等权限，需要由DBA用户给予响应的权限给它。<br>  给予权限的SQL语句是</p>
+<pre><code>grant connect to test;         --给予连接到数据的权限给test用户
+grant resource to test;    --给予创建表、视图等的权限给test用户
+</code></pre><p>  <img src="http://ovr3wvmyf.bkt.clouddn.com/17-9-4/29992468.jpg" alt="给予权限"></p>
+</li>
+</ul>
+<h3 id="建表"><a href="#建表" class="headerlink" title="建表"></a>建表</h3><ul>
+<li>登录test用户<pre><code>conn test\test
+</code></pre></li>
+<li><code>create table tablename ()</code></li>
+</ul>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2017 OctoberCafe<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

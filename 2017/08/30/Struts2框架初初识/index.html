@@ -1,313 +1,290 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
     
-    <title>Struts2框架基本知识 | OctoberCafe&#39;s Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    
-      <link rel="icon" href="/favicon.png">
+        <meta name="description" content="Struts21. Structs2框架-对servlet中的很多细节进行的一种封装,但是structs2框架可以做到servlet做不到的一些操作。
+2. 使用strcuts2框架的步骤1.  创建web项目2. 在lib下加入struts2的jar包3. 在web.xml中添加核心过滤器,过滤器">
     
 
+    <!--Author-->
+    
+        <meta name="author" content="OctoberCafe">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Struts2框架基本知识"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="OctoberCafe&#39;s Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Struts2框架基本知识 - OctoberCafe&#39;s Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="stylesheet" href="/js/google-code-prettify/tomorrow-night-eighties.min.css">
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
 
-  </head>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-  <body>
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
 
-<header>
-	<a id="logo" href="/" title="OctoberCafe&#39;s Blog">
-	<img src="/favicon.png" alt="OctoberCafe&#39;s Blog"></a>
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
 	
-	
-		<!--搜索栏-->
-		<i class="js-toggle-search iconfont icon-search"></i>
+</head>
 
 
-<form class="js-search search-form search-form--modal" method="get" action="http://gushi.li" role="search">
-	<div class="search-form__inner">
-		<div>
-			<i class="iconfont icon-search"></i>
-			<input class="text-input" placeholder="Enter Key..." type="search">
-		</div>
-	</div>
-</form>
-	
+<body>
 
-	
-		<!--侧边导航栏-->
-		<a id="nav-toggle" href="#"><span></span></a>
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
 
-<nav>
-	<div class="menu-top-container">
-		<ul id="menu-top" class="menu">
-			
-				
-				<li class="current-menu-item">
-					<a href="http://weibo.com/OctoberCafe/" target="_blank">Weibo</a>
-				</li>
-			
-		</ul>
-	</div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
 </nav>
-	
 
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Struts2框架基本知识</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2017-08-30
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
-<div class="m-header ">
-	<section id="hero1" class="hero">
-		<div class="inner">
-		</div>
-	</section>
-	
-		<figure class="top-image" data-enable=true></figure>
-	
-</div>
 
-<!--文章列表-->
-<div class="wrapper">
-  
-    <!--文章-->
+<!-- Post Content -->
 <article>
-	
-  
-    <h1 class="post-title" itemprop="name">
-      Struts2框架基本知识
-    </h1>
-  
+    <div class="container">
+        <div class="row">
 
-	<div class='post-body mb'>
-		<h1 id="Struts2"><a href="#Struts2" class="headerlink" title="Struts2"></a>Struts2</h1><h4 id="1-Structs2框架"><a href="#1-Structs2框架" class="headerlink" title="1. Structs2框架"></a>1. Structs2框架</h4><p>-对servlet中的很多细节进行的一种封装,但是structs2框架可以做到servlet做不到的一些操作。</p>
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/JavaWeb/">#JavaWeb</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Struts2"><a href="#Struts2" class="headerlink" title="Struts2"></a>Struts2</h1><h4 id="1-Structs2框架"><a href="#1-Structs2框架" class="headerlink" title="1. Structs2框架"></a>1. Structs2框架</h4><p>-对servlet中的很多细节进行的一种封装,但是structs2框架可以做到servlet做不到的一些操作。</p>
 <h4 id="2-使用strcuts2框架的步骤"><a href="#2-使用strcuts2框架的步骤" class="headerlink" title="2. 使用strcuts2框架的步骤"></a>2. 使用strcuts2框架的步骤</h4><h5 id="1-创建web项目"><a href="#1-创建web项目" class="headerlink" title="1.  创建web项目"></a>1.  创建web项目</h5><h5 id="2-在lib下加入struts2的jar包"><a href="#2-在lib下加入struts2的jar包" class="headerlink" title="2. 在lib下加入struts2的jar包"></a>2. 在lib下加入struts2的jar包</h5><h5 id="3-在web-xml中添加核心过滤器-过滤器filter"><a href="#3-在web-xml中添加核心过滤器-过滤器filter" class="headerlink" title="3. 在web.xml中添加核心过滤器,过滤器filter"></a>3. 在web.xml中添加核心过滤器,过滤器filter</h5><ul>
 <li>在web.xml中添加</li>
 </ul>
-<pre><code>&lt;filter&gt;
-&lt;filter-name&gt;struts2&lt;/filter-name&gt;
-&lt;filter-class&gt;org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter&lt;/filter-class&gt;
-  &lt;/filter&gt;
-  &lt;filter-mapping&gt;
-&lt;filter-name&gt;struts2&lt;/filter-name&gt;
-&lt;url-pattern&gt;*.action&lt;/url-pattern&gt;
-&lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;
-&lt;dispatcher&gt;FORWARD&lt;/dispatcher&gt;
-  &lt;/filter-mapping&gt;
-  &lt;filter-mapping&gt;
-&lt;filter-name&gt;struts2&lt;/filter-name&gt;
-&lt;url-pattern&gt;*.jsp &lt;/url-pattern&gt;
-  &lt;/filter-mapping&gt;
-</code></pre><h5 id="4-在src下配置struts-xml"><a href="#4-在src下配置struts-xml" class="headerlink" title="4. 在src下配置struts.xml"></a>4. 在src下配置struts.xml</h5><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
-&lt;!DOCTYPE struts PUBLIC
-&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;
-&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;&gt;
-&lt;struts&gt;
-        &lt;package name=&quot;cms-package&quot; extends=&quot;struts-default&quot;&gt;
-                &lt;!-- 
-        &lt;constant name=&quot;struts.objectFactory&quot; value=&quot;spring&quot; /&gt;
-        &lt;constant name=&quot;struts.ognl.allowStaticMethodAccess&quot; value=&quot;true&quot; /&gt;
-        &lt;constant name=&quot;struts.multipart.saveDir&quot; value=&quot;/tmp&quot;&gt;&lt;/constant&gt;
-
-    &lt;interceptors&gt;
-            &lt;interceptor name=&quot;auth&quot; class=&quot;com.briup.exam.web.interceptor.AuthInterceptor&quot;&gt;&lt;/interceptor&gt;
-            &lt;interceptor-stack name=&quot;cmsAuthStack&quot;&gt;
-                &lt;interceptor-ref name=&quot;auth&quot;&gt;&lt;/interceptor-ref&gt;
-                &lt;interceptor-ref name=&quot;defaultStack&quot;&gt;&lt;/interceptor-ref&gt;
-            &lt;/interceptor-stack&gt;
-        &lt;/interceptors&gt;
-
-        &lt;global-results&gt;
-            &lt;result name=&quot;toLogin&quot;&gt;
-            /WEB-INF/jsp/login.jsp&lt;/result&gt;
-        &lt;/global-results&gt; --&gt;
-    &lt;/package&gt;
-&lt;/struts&gt;
-</code></pre><h5 id="5-创建前端页面用于访问struts的action"><a href="#5-创建前端页面用于访问struts的action" class="headerlink" title="5. 创建前端页面用于访问struts的action"></a>5. 创建前端页面用于访问struts的action</h5><ul>
-<li><p>可以用一个登陆的name和password进行参数传递的测试</p>
-<pre><code> &lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
-pageEncoding=&quot;UTF-8&quot;%&gt;
-&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
-&lt;title&gt;Insert title here&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;form action=&quot;saveUser.action&quot; method=&quot;post&quot;&gt;
-        用户名:&lt;input type=&quot;text&quot; name=&quot;user.name&quot;&gt;&lt;br&gt;
-        密码:&lt;input type=&quot;password&quot; name=&quot;user.password&quot;&gt;&lt;br&gt;
-        &lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;
-        &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre></li>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">filter</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>struts2<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">filter-class</span>&gt;</span></div><div class="line">	org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</div><div class="line">	<span class="tag">&lt;/<span class="name">filter-class</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">filter</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>struts2<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>*.action<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">dispatcher</span>&gt;</span>REQUEST<span class="tag">&lt;/<span class="name">dispatcher</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">dispatcher</span>&gt;</span>FORWARD<span class="tag">&lt;/<span class="name">dispatcher</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>struts2<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>*.jsp <span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="4-在src下配置struts-xml"><a href="#4-在src下配置struts-xml" class="headerlink" title="4. 在src下配置struts.xml"></a>4. 在src下配置struts.xml</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span> <span class="meta">?&gt;</span></span></div><div class="line"><span class="meta">&lt;!DOCTYPE struts </span></div><div class="line"><span class="meta">PUBLIC"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"</span></div><div class="line"><span class="meta">"http://struts.apache.org/dtds/struts-2.0.dtd"&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">struts</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"cms-package"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.objectFactory"</span> <span class="attr">value</span>=<span class="string">"spring"</span> /&gt;</span></div><div class="line">    	<span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.ognl.allowStaticMethodAccess"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></div><div class="line">    	<span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.multipart.saveDir"</span> <span class="attr">value</span>=<span class="string">"/tmp"</span>&gt;</span><span class="tag">&lt;/<span class="name">constant</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;<span class="name">interceptors</span>&gt;</span></div><div class="line">    		<span class="tag">&lt;<span class="name">interceptor</span> <span class="attr">name</span>=<span class="string">"auth"</span> <span class="attr">class</span>=<span class="string">"com.briup.exam.web.interceptor.AuthInterceptor"</span>&gt;</span><span class="tag">&lt;/<span class="name">interceptor</span>&gt;</span></div><div class="line">    		<span class="tag">&lt;<span class="name">interceptor-stack</span> <span class="attr">name</span>=<span class="string">"cmsAuthStack"</span>&gt;</span></div><div class="line">    			<span class="tag">&lt;<span class="name">interceptor-ref</span> <span class="attr">name</span>=<span class="string">"auth"</span>&gt;</span><span class="tag">&lt;/<span class="name">interceptor-ref</span>&gt;</span></div><div class="line">    			<span class="tag">&lt;<span class="name">interceptor-ref</span> <span class="attr">name</span>=<span class="string">"defaultStack"</span>&gt;</span><span class="tag">&lt;/<span class="name">interceptor-ref</span>&gt;</span></div><div class="line">    		<span class="tag">&lt;/<span class="name">interceptor-stack</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;/<span class="name">interceptors</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;<span class="name">global-results</span>&gt;</span></div><div class="line">    		<span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">"toLogin"</span>&gt;</span>/WEB-INF/jsp/login.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></div><div class="line">    	<span class="tag">&lt;/<span class="name">global-results</span>&gt;</span> </div><div class="line">    <span class="tag">&lt;/<span class="name">package</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">struts</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="5-创建前端页面用于访问struts的action"><a href="#5-创建前端页面用于访问struts的action" class="headerlink" title="5. 创建前端页面用于访问struts的action"></a>5. 创建前端页面用于访问struts的action</h5><ul>
+<li>可以用一个登陆的name和password进行参数传递的测试<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;%@ page language=<span class="string">"java"</span> contentType=<span class="string">"text/html; charset=UTF-8"</span>pageEncoding=<span class="string">"UTF-8"</span>%&gt;</div><div class="line">&lt;!DOCTYPE html PUBLIC <span class="string">"-//W3C//DTD HTML 4.01 Transitional//EN"</span> </div><div class="line"><span class="string">"http://www.w3.org/TR/html4/loose.dtd"</span>&gt;</div><div class="line">&lt;html&gt;</div><div class="line">	&lt;head&gt;</div><div class="line">		&lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=UTF-8"</span>&gt;</div><div class="line">		&lt;title&gt;Insert title here&lt;/title&gt;</div><div class="line">	&lt;/head&gt;</div><div class="line">	&lt;body&gt;</div><div class="line">		&lt;form action=<span class="string">"saveUser.action"</span> method=<span class="string">"post"</span>&gt;</div><div class="line">			用户名:&lt;input type=<span class="string">"text"</span> name=<span class="string">"user.name"</span>&gt;&lt;br&gt;</div><div class="line">			密码:&lt;input type=<span class="string">"password"</span> name=<span class="string">"user.password"</span>&gt;&lt;br&gt;</div><div class="line">			&lt;input type=<span class="string">"submit"</span> value=<span class="string">"提交"</span>&gt;</div><div class="line">		&lt;/form&gt;</div><div class="line">	&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h5 id="6-创建action"><a href="#6-创建action" class="headerlink" title="6. 创建action"></a>6. 创建action</h5><p> 注解配置action的命名空间<br>    package-info.java<br>    @Namespace(“/“)<br>    @ParentPackage(“struts-default”)<br>    package package name;<br>    import org.apache.struts2.convention.annotation.Namespace;<br>    import org.apache.struts2.convention.annotation.ParentPackage;</p>
-<pre><code>class XXAction extends ActionSupport{
-@Action(value=&quot;/xx&quot;,
-    results={@Result(
-    //利用jQuery中的$进行匹配，对符合js文件中的要求的页面进行匹配
-    name=&quot;SUCCESS&quot;,location=&quot;/WEB-INF/jsp/${parentDriect}/${specifyUrl}&quot;)})
-        public String  test(){
-            return SUCCESS;
-        }
-    }
-</code></pre><h5 id="7-使用监听器"><a href="#7-使用监听器" class="headerlink" title="7. 使用监听器"></a>7. 使用监听器</h5><ul>
-<li>监听器的实例化</li>
-</ul>
-<pre><code>class XXListener implements ServletContextListener{
-    public void contextInitialized(ServletContextEvent arg0) {
-    // TODO Auto-generated method stub
-    //获取到容器，从容器中获取Service层的对象
-    //    WebApplicationContext context = WebApplicationContextUtils.getWebApplicationContext(arg0.getServletContext());
-    //    XXService service1 = (xxService) context.getBean(&quot;XXServiceImpl&quot;);
-    ServletContext app = arg0.getServletContext();
-        }
-    }
-</code></pre><ul>
-<li>客户端重定向 redirect redirectAction与服务器内部跳转  dispatcher  chain\测试</li>
-<li><p>IndexAction.java</p>
-<pre><code>package com.briup.web.action;
-
-import org.apache.struts2.convention.annotation.Action;
-import org.apache.struts2.convention.annotation.Result;
-
-import com.opensymphony.xwork2.ActionSupport;
-//action
-
-public class IndexAction extends ActionSupport{
-
-    /**
-     * 
-     */
-    private static final long serialVersionUID = 1L;
-    @Action(value=&quot;/toIndex&quot;,
-            results={
-    @Result(name=&quot;SUCCESS&quot;,location=&quot;/WEB-INF/jsp/index.jsp&quot;)})//对index的注解，注解名字是toIndex在部署之后可以通过访问toIndex进行访问
-    public String toIndex(){
-        System.out.println(&quot;in to index..&quot;);
-        return &quot;SUCCESS&quot;;
-    }
-}
-</code></pre></li>
-</ul>
-<ul>
-<li>要新建一个名叫package-info的文件继承struts默认的类</li>
-<li><pre><code>@Namespace(&quot;/&quot;)
-@ParentPackage(&quot;struts-default&quot;)
-package com.briup.web.action;
-import org.apache.struts2.convention.annotation.Namespace;
-import org.apache.struts2.convention.annotation.ParentPackage;
-</code></pre></li>
+<h5 id="6-创建action"><a href="#6-创建action" class="headerlink" title="6. 创建action"></a>6. 创建action</h5><p> 注解配置action的命名空间<br> package-info.java<br> <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Namespace</span>(<span class="string">"/"</span>)</div><div class="line"><span class="meta">@ParentPackage</span>(<span class="string">"struts-default"</span>)</div><div class="line"><span class="keyword">package</span> pacage-name;</div><div class="line"><span class="keyword">import</span> org.apache.struts2.convention.annotation.Namespace;</div><div class="line"><span class="keyword">import</span> org.apache.struts2.convention.annotation.ParentPackage;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">XXAction</span> <span class="keyword">extends</span> <span class="title">ActionSupport</span></span>&#123;</div><div class="line">	<span class="meta">@Action</span>(value=<span class="string">"/xx"</span>,results=&#123;<span class="meta">@Result</span>(</div><div class="line">	<span class="comment">//利用jQuery中的$进行匹配，对符合js文件中的要求的页面进行匹配</span></div><div class="line">	name=<span class="string">"SUCCESS"</span>,location=<span class="string">"/WEB-INF/jsp/$&#123;parentDriect&#125;/$&#123;specifyUrl&#125;"</span>)&#125;)</div><div class="line">	<span class="function"><span class="keyword">public</span> String  <span class="title">test</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> SUCCESS;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="7-使用监听器"><a href="#7-使用监听器" class="headerlink" title="7. 使用监听器"></a>7. 使用监听器</h5><ul>
+<li><p>监听器的实例化</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">XXListener</span> <span class="keyword">implements</span> <span class="title">ServletContextListener</span></span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextInitialized</span><span class="params">(ServletContextEvent arg0)</span> </span>&#123;</div><div class="line">		<span class="comment">// TODO Auto-generated method stub</span></div><div class="line">		<span class="comment">//获取到容器，从容器中获取Service层的对象</span></div><div class="line">		<span class="comment">//	WebApplicationContext context = WebApplicationContextUtils.getWebApplicationContext(arg0.getServletContext());</span></div><div class="line">		<span class="comment">//	XXService service1 = (xxService) context.getBean("XXServiceImpl");</span></div><div class="line">		ServletContext app = arg0.getServletContext();</div><div class="line">		&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>客户端重定向 redirect redirectAction与服务器内部跳转  dispatcher  chain\测试</p>
+</li>
+<li>IndexAction.java<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.briup.web.action;	</div><div class="line"><span class="keyword">import</span> org.apache.struts2.convention.annotation.Action;</div><div class="line"><span class="keyword">import</span> org.apache.struts2.convention.annotation.Result;</div><div class="line"><span class="keyword">import</span> com.opensymphony.xwork2.ActionSupport;</div><div class="line"><span class="comment">//action</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IndexAction</span> <span class="keyword">extends</span> <span class="title">ActionSupport</span></span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</div><div class="line">	<span class="meta">@Action</span>(value=<span class="string">"/toIndex"</span>,results=&#123;</div><div class="line">	<span class="meta">@Result</span>(name=<span class="string">"SUCCESS"</span>,location=<span class="string">"/WEB-INF/jsp/index.jsp"</span>)&#125;)</div><div class="line">	<span class="comment">//对index的注解，注解名字是toIndex在部署之后可以通过访问toIndex进行访问</span></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">toIndex</span><span class="params">()</span></span>&#123;</div><div class="line">		System.out.println(<span class="string">"in to index.."</span>);</div><div class="line">		<span class="keyword">return</span> <span class="string">"SUCCESS"</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">```	</div><div class="line">* 要新建一个名叫<span class="keyword">package</span>-info的文件继承struts默认的类</div><div class="line">* </div><div class="line">``` java</div><div class="line">	<span class="meta">@Namespace</span>(<span class="string">"/"</span>)</div><div class="line">	<span class="meta">@ParentPackage</span>(<span class="string">"struts-default"</span>)</div><div class="line">	<span class="keyword">package</span> com.briup.web.action;</div><div class="line">	<span class="keyword">import</span> org.apache.struts2.convention.annotation.Namespace;</div><div class="line">	<span class="keyword">import</span> org.apache.struts2.convention.annotation.ParentPackage;</div></pre></td></tr></table></figure></li>
 </ul>
 
-	</div>
-	<div class="meta split">
-		
-			<span>本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
-		
-		<time class="post-date" datetime="2017-08-29T17:13:17.000Z" itemprop="datePublished">2017-08-30</time>
-	</div>
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
 </article>
 
-<!--评论-->
+    <!-- Footer -->
+    <hr />
 
-	
-<div class="ds-thread" data-thread-key="Struts2框架初初识" data-title="Struts2框架基本知识" data-url="http://yoursite.com/2017/08/30/Struts2框架初初识/"></div>
-<script type="text/javascript">
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
 
-var duoshuoQuery = {short_name:"yumemor"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0]
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-</script>
+                    
 
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
 
-  
-</div>
+                    
 
+                    
 
-  <svg id="bigTriangleColor" width="100%" height="40" viewBox="0 0 100 102" preserveAspectRatio="none">
-    <path d="M0 0 L50 100 L100 0 Z"></path>
-  </svg>
-
-  
-
-
-  <div class="wrapper"></div>
-
-
-
-
-
-<div class="fat-footer">
-	<div class="wrapper">
-		<div class="layout layout--center">
-			<div class="layout__item palm-mb">
-				<div class="media">
-					<img class="headimg" src='http://oct8d1mqf.bkt.clouddn.com/2016-10-17-15%3A42%3A28.jpg' alt='OctoberCafe'>
-					<div class="media__body">
-						<h4>OctoberCafe&#39;s Blog</h4>
-						<p class='site-description'></p>
-					</div>
-				</div>
-				<div class="author-contact">
-					<ul>
-						
-							
-							<li>
-				        		<a href="http://weibo.com/OctoberCafe/" target="_blank">
-				        			
-				        				<i class="iconfont icon-weibo"></i>
-				        			
-				        		</a>
-				        	</li>
-						
-							
-							<li>
-				        		<a href="https://github.com/OctoberCafe" target="_blank">
-				        			
-				        				<i class="iconfont icon-github"></i>
-				        			
-				        		</a>
-				        	</li>
-						
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<footer class="footer" role="contentinfo">
-	<div class="wrapper wrapper--wide split split--responsive">
-		
-			<span>本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次</span>
-		
-		<span>Theme by <a href="http://github.com/yumemor">Yumemor</a>. Powered by <a href="http://hexo.io">Hexo</a></span>
-	</div>
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2017 OctoberCafe<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
 </footer>
 
-	<!-－这里导入了 lib.js 里面涵盖了 jQuery 等框架 所以注释掉-->
-	<!--<script src="http://lib.sinaapp.com/js/jquery/2.0/jquery.min.js"></script>-->
-	<script src="/js/lib.js"></script>
-	<script src="/js/google-code-prettify/prettify.js"></script>
-	<script src="/js/module.js"></script>
-	<script src="/js/script.js"></script>
-	
-		<script async src="http://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-	
-	<script type='text/javascript'>
-		//代码高亮
-		$(document).ready(function(){
-	 		$('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
-   			prettyPrint();
-		});
-	</script>
-	</body>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
 </html>
