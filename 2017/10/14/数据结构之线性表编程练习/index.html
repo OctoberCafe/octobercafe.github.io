@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="1.删除顺序表中最小的元素，并且返回该元素的值,空出的位置由最后一个元素填补。12345678910111213141516171819202122bool Del_Min(SqList &amp;amp;L,ElemType &amp;amp;value)&amp;#123;//删除顺序表L中最小值元素节点，并通过引用型">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="OctoberCafe">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="数据结构之线性表编程练习"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="OctoberCafe&#39;s Blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>数据结构之线性表编程练习 - OctoberCafe&#39;s Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+	
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/OctoberCafe">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>数据结构之线性表编程练习</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2017-10-14
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/数据结构/">#数据结构</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/数据结构/">数据结构</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h3 id="1-删除顺序表中最小的元素，并且返回该元素的值-空出的位置由最后一个元素填补。"><a href="#1-删除顺序表中最小的元素，并且返回该元素的值-空出的位置由最后一个元素填补。" class="headerlink" title="1.删除顺序表中最小的元素，并且返回该元素的值,空出的位置由最后一个元素填补。"></a>1.删除顺序表中最小的元素，并且返回该元素的值,空出的位置由最后一个元素填补。</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Del_Min</span><span class="params">(SqList &amp;L,ElemType &amp;value)</span></span>&#123;</div><div class="line"><span class="comment">//删除顺序表L中最小值元素节点，并通过引用型参数value返回值</span></div><div class="line"><span class="comment">//删除成功返回true 不成功返回false</span></div><div class="line">	<span class="keyword">if</span> (L.length==<span class="number">0</span>)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">	&#125;</div><div class="line">	value =L.data[<span class="number">0</span>];</div><div class="line">	<span class="keyword">int</span> pos=<span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; L.length; ++i)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span> (L.data[i]&lt;value)</div><div class="line">		&#123;</div><div class="line">			value=L.value[i];</div><div class="line">			pos=i;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">		L.data[pos]=L.data[L.length<span class="number">-1</span>];</div><div class="line">	L.length--;</div><div class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="2-设计一个高效算法-逆置线性表中所有的元素-空间复杂度为O-1"><a href="#2-设计一个高效算法-逆置线性表中所有的元素-空间复杂度为O-1" class="headerlink" title="2.设计一个高效算法 逆置线性表中所有的元素 空间复杂度为O(1)"></a>2.设计一个高效算法 逆置线性表中所有的元素 空间复杂度为O(1)</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//算法思想：扫描顺序表中的前半部分元素。对于L.data[i](0&lt;=i&lt;=L.length/2)，</span></div><div class="line"><span class="comment">//将其余的后半部分对应元素L.data[L.length-i-1]进行交换</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Reverse</span><span class="params">(SqList &amp;L)</span></span>&#123;</div><div class="line">	ElemType temp;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; L.length/<span class="number">2</span>; ++i)</div><div class="line">	&#123;</div><div class="line">		temp=L.data[i];</div><div class="line">		L.data[i]=L.data[L.length-i<span class="number">-1</span>];</div><div class="line">		L.data[L.length-i<span class="number">-1</span>]=temp;	</div><div class="line">			&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="3-长度为n的线性表L上，编写一个时间复杂度为O-n-，空间复杂度为O-1-的算法，删除所有值为x的元素"><a href="#3-长度为n的线性表L上，编写一个时间复杂度为O-n-，空间复杂度为O-1-的算法，删除所有值为x的元素" class="headerlink" title="3.长度为n的线性表L上，编写一个时间复杂度为O(n)，空间复杂度为O(1)的算法，删除所有值为x的元素"></a>3.长度为n的线性表L上，编写一个时间复杂度为O(n)，空间复杂度为O(1)的算法，删除所有值为x的元素</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//解法一：用k记录顺序表中值不为x的元素个数（即为需要保留的元素）</span></div><div class="line"><span class="comment">// 		 一边扫描L一边统计k，并将不等于x的元素放置k位置上，最后修改L的长度</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Del_x_1</span><span class="params">(SqList &amp;L,ElemType x)</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> k=<span class="number">0</span>; <span class="comment">//记录值不为x的元素个数</span></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; L.length; ++i)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span> (L.data[i]!=x)</div><div class="line">		&#123;</div><div class="line">		L.data[k]=L.data[i];</div><div class="line">		k++;<span class="comment">//不等于x则k值加一</span></div><div class="line">	&#125;</div><div class="line">	&#125;</div><div class="line">	L.length=k;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//解法二：用k记录顺序表中元素值为x的元素个数，边扫描L边统计k，</span></div><div class="line"><span class="comment">//       并将不等于x的元素前移k个位置，最后修改顺序表的长度</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Del_x_2</span><span class="params">(SqList &amp;L,ElemType x)</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> k=<span class="number">0</span>,i=<span class="number">0</span>;</div><div class="line">	<span class="keyword">while</span>(i&lt;L.length)&#123;</div><div class="line">		<span class="keyword">if</span> (L.data[i]==x)</div><div class="line">		&#123;</div><div class="line">			k++;</div><div class="line">		&#125;<span class="keyword">else</span></div><div class="line">			L.data[i-k]=L.data[i];<span class="comment">//当前元素向前移动k位置</span></div><div class="line">		i++;	</div><div class="line">	&#125;</div><div class="line">	L.length-=k;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="4-有序表中删除给定指s与t之间的所有元素，要求s-lt-t-若s或t不合理或者线性表为空则显示出错信息并退出运行"><a href="#4-有序表中删除给定指s与t之间的所有元素，要求s-lt-t-若s或t不合理或者线性表为空则显示出错信息并退出运行" class="headerlink" title="4.有序表中删除给定指s与t之间的所有元素，要求s&lt;t;若s或t不合理或者线性表为空则显示出错信息并退出运行"></a>4.有序表中删除给定指s与t之间的所有元素，要求s&lt;t;若s或t不合理或者线性表为空则显示出错信息并退出运行</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//算法思想：先寻找大于等于s的第一个元素（第一个要删除的元素），然后寻找值为大于t的第一</span></div><div class="line"><span class="comment">//个元素（要删除的最后一个元素的下一个元素)，要将这段元素删除，则只需要将后面的元素</span></div><div class="line"><span class="comment">//前移即可</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Del_s_t</span><span class="params">(SqList &amp;L,ElemType s,ElemType t)</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> i,j;</div><div class="line">	<span class="keyword">if</span> (s&gt;t||s&lt;<span class="number">0</span>||t&lt;<span class="number">0</span>||L.length==<span class="number">0</span>)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; L.length &amp;&amp; L.data[i]&lt;s; ++i);<span class="comment">//寻找大于等于s的第一个元素</span></div><div class="line">	<span class="keyword">if</span> (i&gt;=L.length)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (j = i; j &lt; L.length &amp;&amp; L.data[j]&lt;=t; ++j);<span class="comment">//寻找值大于t的第一个元素</span></div><div class="line">	</div><div class="line">	<span class="keyword">for</span> (; j &lt; L.length; ++j,++i)</div><div class="line">	&#123;</div><div class="line">		L.data[i]=L.data[j];</div><div class="line">	&#125;</div><div class="line">	L.length=i;</div><div class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="5-顺序表中删除给定指s与t之间的所有元素，要求s-lt-t-包含-s与t。若s或t不合理或者线性表为空则显示出错信息并退出运行"><a href="#5-顺序表中删除给定指s与t之间的所有元素，要求s-lt-t-包含-s与t。若s或t不合理或者线性表为空则显示出错信息并退出运行" class="headerlink" title="5.顺序表中删除给定指s与t之间的所有元素，要求s&lt;t 包含 s与t。若s或t不合理或者线性表为空则显示出错信息并退出运行"></a>5.顺序表中删除给定指s与t之间的所有元素，要求s&lt;t 包含 s与t。若s或t不合理或者线性表为空则显示出错信息并退出运行</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//算法思想：对比上一题 这次只是顺序表而不是有序表 所以思想有所改变</span></div><div class="line"><span class="comment">//从前向后扫描顺序表L 用k记下 元素在s与t之间 包括s与t 的个数 k初始化为0</span></div><div class="line"><span class="comment">//对于不在该区间的元素则向前移动k个位置 否则k++ 最后L的长度减去k</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Del_s_t</span><span class="params">(SqList &amp;L,ElemType s,ElemType t)</span></span>&#123;</div><div class="line"><span class="comment">//删除顺序表在给定值s与t之间的元素（包括s与t）</span></div><div class="line">	<span class="keyword">int</span> i,k=<span class="number">0</span>;</div><div class="line">	<span class="keyword">if</span>(L.length==<span class="number">0</span>||s&gt;=t)</div><div class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;L.length;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span> (L.data[i]&gt;=s&amp;&amp;L.data[i]&lt;=t)</div><div class="line">		&#123;</div><div class="line">			k++;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span> </div><div class="line">			L.data[i-k]=L.data[i];</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	L.length-=k;</div><div class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="6-删除有序表中的重复元素"><a href="#6-删除有序表中的重复元素" class="headerlink" title="6.删除有序表中的重复元素"></a>6.删除有序表中的重复元素</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//算法思想：因为是有序表，所以相同的元素一定在连续的位置上，</span></div><div class="line"><span class="comment">//用类似与直接插入排序的思想，初始时将第一个看作非重复的有序表</span></div><div class="line"><span class="comment">//之后依次判断后面的元素是否与前面非重复的元素有序表的最后一个元素相同</span></div><div class="line"><span class="comment">//如果相同则继续向后判断，否则插入前面这个有序表，直到判断到表位</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Delete_same</span><span class="params">(SqList &amp;L)</span></span>&#123;</div><div class="line">	<span class="keyword">if</span> (L.length==<span class="number">0</span>)</div><div class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">	<span class="keyword">int</span> i,j;</div><div class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>,j=<span class="number">1</span>;j&lt;L.length;j++)</div><div class="line">		<span class="keyword">if</span> (L.data[i]!=L.data[j])</div><div class="line">		&#123;</div><div class="line">			L.data[++i]=L.data[j];</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	L.length=i+<span class="number">1</span>;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="7-将两个有序顺序表合并成一个有序顺序表"><a href="#7-将两个有序顺序表合并成一个有序顺序表" class="headerlink" title="7.将两个有序顺序表合并成一个有序顺序表"></a>7.将两个有序顺序表合并成一个有序顺序表</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//算法思想：按顺序不断取下两个顺序表表头较小的元素插入新的顺序表</span></div><div class="line"><span class="comment">//之后看哪一个顺序表还有剩余元素，则将所有剩余元素按顺序加入到新的</span></div><div class="line"><span class="comment">//顺序表后面</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Merge</span><span class="params">(SqList A,SqList B,SqList &amp;C)</span></span>&#123;</div><div class="line">	<span class="keyword">if</span> (A.length+B.length &gt; C.maxLength)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>,k=<span class="number">0</span>;</div><div class="line">	<span class="keyword">while</span>(i&lt;A.length&amp;&amp;j&lt;B.length)&#123;</div><div class="line">		<span class="keyword">if</span> (A.data[i] &lt;= B.data[j])</div><div class="line">		&#123;</div><div class="line">			C.data[k++]=A.data[i++];</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span></div><div class="line">			C.data[k++]=B.data[j++];</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">while</span>(i&lt;A.length)</div><div class="line">		C.data[k++]=A.data[i++];</div><div class="line">	<span class="keyword">while</span>(j&lt;B.length)</div><div class="line">		C.data[k++]=B.data[j++];</div><div class="line">	C.length=k;</div><div class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="8-在一维数组A-m-n-中依次存放着两个线性表-a1-a2-…-am-以及-b1-b2-…-bn-。写一个函数使得两个线性表位置交换——比如现在A-m-n-a1-a2-…-am-b1-b2-…-bn-交换以后A-n-m-b1-b2-…bn-a1-a2-…am"><a href="#8-在一维数组A-m-n-中依次存放着两个线性表-a1-a2-…-am-以及-b1-b2-…-bn-。写一个函数使得两个线性表位置交换——比如现在A-m-n-a1-a2-…-am-b1-b2-…-bn-交换以后A-n-m-b1-b2-…bn-a1-a2-…am" class="headerlink" title="8.在一维数组A[m+n]中依次存放着两个线性表(a1,a2,…,am)以及(b1,b2,…,bn)。写一个函数使得两个线性表位置交换——比如现在A[m+n]={a1,a2,…,am,b1,b2,…,bn}交换以后A[n+m]={b1,b2,…bn,a1,a2,…am}"></a>8.在一维数组A[m+n]中依次存放着两个线性表(a1,a2,…,am)以及(b1,b2,…,bn)。写一个函数使得两个线性表位置交换——比如现在A[m+n]={a1,a2,…,am,b1,b2,…,bn}交换以后A[n+m]={b1,b2,…bn,a1,a2,…am}</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//算法思想：首先将数组A[m+n]中的所有元素原地逆置(bn,...,b2,b1,am,...a2,a1)</span></div><div class="line"><span class="comment">//再分别对前n个元素和后m个元素进行逆置</span></div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> DataType;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Reverse</span><span class="params">(DataType A[],<span class="keyword">int</span> left,<span class="keyword">int</span> right,<span class="keyword">int</span> arraySize)</span></span>&#123;</div><div class="line">	<span class="comment">//逆转(aleft,aleft+1,...,aright)为(aright,aright-1,...aleft)</span></div><div class="line">	<span class="keyword">if</span> (left&gt;=right||right&gt;=arraySize)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> mid=(left+right)/<span class="number">2</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= mid -left; ++i)</div><div class="line">	&#123;</div><div class="line">		DataType temp=A[left+i];</div><div class="line">		A[left+i]=A[right-i];</div><div class="line">		A[right-i]=temp;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="9-线性表-a1-a2-…-an-中元素递增有序地按顺序存储在计算机内。设计一个算法用最少时间在表中查找数值为x的元素，若找到将其与后继元素位置交换-若找不到，则将其插入表中并使得表中元素仍然递增有序"><a href="#9-线性表-a1-a2-…-an-中元素递增有序地按顺序存储在计算机内。设计一个算法用最少时间在表中查找数值为x的元素，若找到将其与后继元素位置交换-若找不到，则将其插入表中并使得表中元素仍然递增有序" class="headerlink" title="9.线性表(a1,a2,…,an)中元素递增有序地按顺序存储在计算机内。设计一个算法用最少时间在表中查找数值为x的元素，若找到将其与后继元素位置交换,若找不到，则将其插入表中并使得表中元素仍然递增有序"></a>9.线性表(a1,a2,…,an)中元素递增有序地按顺序存储在计算机内。设计一个算法用最少时间在表中查找数值为x的元素，若找到将其与后继元素位置交换,若找不到，则将其插入表中并使得表中元素仍然递增有序</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//算法思想：顺序存储的线性表递增有序，可以顺序查找，也可折半查找。题目要求在</span></div><div class="line"><span class="comment">//最短时间内查找元素为x的元素，应该使用折半查找</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">SearchExchangeInsert</span><span class="params">(ElemType x,ElemType A[])</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> low=<span class="number">0</span>,high=n<span class="number">-1</span>,mid;</div><div class="line">	<span class="keyword">while</span>(low&lt;=high)&#123;</div><div class="line">		mid = (low+high)/<span class="number">2</span>;</div><div class="line">		<span class="keyword">if</span> (A[mid]==x) <span class="keyword">break</span>;</div><div class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (A[mid]&lt;x) low=mid+<span class="number">1</span>;</div><div class="line">		<span class="keyword">else</span> high=mid<span class="number">-1</span></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (A[mid]==x&amp;&amp;mid!=n<span class="number">-1</span>)<span class="comment">//若最后一个元素与x相等则不存在与其后继交换的操作</span></div><div class="line">	&#123;</div><div class="line">		t=A[mid];</div><div class="line">		A[mid]=A[mid+<span class="number">1</span>];</div><div class="line">		A[mid+<span class="number">1</span>]=t;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">if</span> (low&gt;high)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = n<span class="number">-1</span>; i &gt;high; --i)</div><div class="line">		&#123;</div><div class="line">			</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="10-将数组R保存的序列循环左移p个单位-即是将x0-x1-…-xn变换成xp-x-p-1-…-xn-x0-x1-x-p-1-要求给出算法的基本思想和时间空间复杂度"><a href="#10-将数组R保存的序列循环左移p个单位-即是将x0-x1-…-xn变换成xp-x-p-1-…-xn-x0-x1-x-p-1-要求给出算法的基本思想和时间空间复杂度" class="headerlink" title="10.将数组R保存的序列循环左移p个单位,即是将x0,x1,…,xn变换成xp,x(p+1),…,xn,x0,x1,..x(p-1),要求给出算法的基本思想和时间空间复杂度"></a>10.将数组R保存的序列循环左移p个单位,即是将x0,x1,…,xn变换成xp,x(p+1),…,xn,x0,x1,..x(p-1),要求给出算法的基本思想和时间空间复杂度</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//算法思想： 可以将这个数组ab转换成ba(a表示由前p个元素构成的数组，b表示余下的n-p个元素</span></div><div class="line"><span class="comment">//组成的数组。先将a逆置得到（a'b）  再将b逆置得到（a'b'）最后将整个（a'b'）逆置</span></div><div class="line"><span class="comment">//得到b'a'</span></div><div class="line"><span class="comment">//设reverse函数进行逆置操作。例如对abcdefgh向左循环移动3个位置的步骤：</span></div><div class="line"><span class="comment">//Reverse(0,p-1)得到cbadefgh</span></div><div class="line"><span class="comment">//Reverse(p,n-1)得到cbahgfed</span></div><div class="line"><span class="comment">//Reverse(0,n-1)得到defghabc；</span></div><div class="line"></div><div class="line"><span class="comment">//上面三个时间复杂度分别为O(p/2),O((n-p)/2),O(n/2)</span></div><div class="line"><span class="comment">//因此上面的算法的时间复杂度为O(n)，空间复杂度为O(1)</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Reverse</span><span class="params">(<span class="keyword">int</span> R[],<span class="keyword">int</span> from,<span class="keyword">int</span> to)</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> i,temp;</div><div class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;(to-from+<span class="number">1</span>)/<span class="number">2</span> ;i++ )</div><div class="line">	&#123;</div><div class="line">		temp=R[from+i];</div><div class="line">		R[from+i]=R[to-i];</div><div class="line">		R[to-i]=temp;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">	</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Converse</span><span class="params">(<span class="keyword">int</span> R[],<span class="keyword">int</span> n,<span class="keyword">int</span> p)</span></span>&#123;</div><div class="line">	Reverse(R,<span class="number">0</span>,p<span class="number">-1</span>);</div><div class="line">	Reverse(R,p,n<span class="number">-1</span>);</div><div class="line">	Reverse(R,<span class="number">0</span>,n<span class="number">-1</span>);</div><div class="line">&#125; </div><div class="line"> </div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//还有一种算法思想是：创建一个大小为p的辅助数组S，将R中的前p</span></div><div class="line"><span class="comment">//个元素依次放在S中，同时将R后面的n-p个元素向前移动p个位置,最后将S中暂存的p个元素放回R中</span></div><div class="line"><span class="comment">//时间发杂的为O(n)，空间复杂度为O(p)</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Converse</span><span class="params">(<span class="keyword">int</span> R[],<span class="keyword">int</span> n,<span class="keyword">int</span> p)</span></span>&#123;</div><div class="line">     <span class="keyword">int</span> S[p],temp;</div><div class="line">     <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;p;i++)</div><div class="line">     	S[i]=R[i];</div><div class="line">     <span class="keyword">for</span> (i = p; i &lt; n; ++i)</div><div class="line">     	R[i-p]=R[i];</div><div class="line">     <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;p;i++)</div><div class="line">     	R[n-p+i]=S[i];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="11-一个长度为L的升序序列S，处在-L-2-位置的数称为中位数。两个序列的中位数是含有两个序列的所有元素的序列的中位数-设计一个在时间和空间上尽可能优的算法来求两个序列的中位数"><a href="#11-一个长度为L的升序序列S，处在-L-2-位置的数称为中位数。两个序列的中位数是含有两个序列的所有元素的序列的中位数-设计一个在时间和空间上尽可能优的算法来求两个序列的中位数" class="headerlink" title="11.一个长度为L的升序序列S，处在[L/2]位置的数称为中位数。两个序列的中位数是含有两个序列的所有元素的序列的中位数,设计一个在时间和空间上尽可能优的算法来求两个序列的中位数"></a>11.一个长度为L的升序序列S，处在[L/2]位置的数称为中位数。两个序列的中位数是含有两个序列的所有元素的序列的中位数,设计一个在时间和空间上尽可能优的算法来求两个序列的中位数</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//算法思想：两个升序序列A与B，中位数分别是a,b。求序列A、B的中位数步骤</span></div><div class="line"><span class="comment">//1) 若 a==b  a或者b即是所求中位数，算法结束</span></div><div class="line"><span class="comment">//2) 若 a&lt;b   舍弃A较小的一半元素，同时舍弃B较大的一半元素，要求舍弃的长度保持一致</span></div><div class="line"><span class="comment">//3) 若 a&gt;b   舍弃A较大的一半元素，同时舍弃B较小的一半元素，要求舍弃的长度保持一致</span></div><div class="line"><span class="comment">//在保留的两个升序序列中不断重复上面1，2，3步，直到两个序列均只含有一个元素,此时较小的元素</span></div><div class="line"><span class="comment">//即是中位数</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Mid_Search</span><span class="params">(<span class="keyword">int</span> A[],<span class="keyword">int</span> B[],<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line"> 	<span class="comment">//定义A,B的首位数、末位数和中位数</span></div><div class="line"> 	<span class="keyword">int</span> s1=<span class="number">0</span>,d1=n<span class="number">-1</span>,m1;</div><div class="line"> 	<span class="keyword">int</span> s2=<span class="number">0</span>,d2=n<span class="number">-2</span>,m2;</div><div class="line"> 	<span class="keyword">while</span>(s1!=d1||s2!=d2)</div><div class="line"> 	&#123;</div><div class="line"> 		m1=(s1+d1)/<span class="number">2</span>;</div><div class="line"> 		m2=(s2+d2)/<span class="number">2</span>;</div><div class="line"> 		<span class="keyword">if</span> (A[m1]==B[m2])</div><div class="line"> 		&#123;</div><div class="line"> 			<span class="keyword">return</span> A[m1];<span class="comment">//满足条件一</span></div><div class="line"> 		&#125;</div><div class="line"></div><div class="line"> 		<span class="keyword">if</span> (A[m1]&lt;B[m2])<span class="comment">//满足条件二</span></div><div class="line"> 		&#123;</div><div class="line"> 			<span class="keyword">if</span> ((s1+d1)%<span class="number">2</span>==<span class="number">0</span>)<span class="comment">//若元素个数奇数</span></div><div class="line"> 			&#123;</div><div class="line"> 				s1=m1;<span class="comment">//舍弃A中间点以前的部分并且保留中间点</span></div><div class="line"> 				d2=m2;<span class="comment">//舍弃B中间点以后的部分并且保留中间点</span></div><div class="line"> 			&#125;</div><div class="line"> 			<span class="keyword">else</span>&#123;<span class="comment">//若元素个数偶数</span></div><div class="line"> 				s1=m1+<span class="number">1</span>;<span class="comment">//舍弃A中间点及以前的部分</span></div><div class="line"> 				d2=m2;<span class="comment">//舍弃B中间点以后的部分并且保留中间点</span></div><div class="line"> 			&#125;</div><div class="line"> 		&#125;</div><div class="line"> 		<span class="keyword">else</span>&#123;<span class="comment">//满足条件3</span></div><div class="line"> 			<span class="keyword">if</span> ((s2+d2)%<span class="number">2</span>==<span class="number">0</span>)<span class="comment">//若元素个数奇数</span></div><div class="line"> 			&#123;</div><div class="line"> 				d1=m1;<span class="comment">//舍弃A中间点以后的部分且保留中间点</span></div><div class="line"> 				s2=m2;<span class="comment">//舍弃B中间点以后的部分且保留中间点</span></div><div class="line"> 			&#125;</div><div class="line"> 			<span class="keyword">else</span>&#123;<span class="comment">//若元素个数偶数</span></div><div class="line"> 				d1=m1;<span class="comment">//舍弃A中间点以后的部分且保留中间点</span></div><div class="line"> 				s2=m2+<span class="number">1</span>;<span class="comment">//舍弃B中间点及中间点以后的部分</span></div><div class="line"> 			&#125;</div><div class="line"> 		&#125;</div><div class="line"></div><div class="line"></div><div class="line"> 	&#125;</div><div class="line"></div><div class="line"> 	<span class="keyword">return</span> A[s1]&lt;B[s2]?A[s1]:B[s2];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/OctoberCafe" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2017 OctoberCafe<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
